@@ -22,6 +22,14 @@ const routes = [
       {
         path: '/get-vehicle',
         component: () => import('./views/main/GetVehicle'),
+      },
+      {
+        path: '/success-page',
+        component: () => import('./views/main/SuccessPage'),
+      },
+      {
+        path: '/payment-plan',
+        component: () => import('./views/main/PaymentPlan'),
       }
     ]
   }

@@ -1,2 +1,28 @@
 $body-bg: #fff;
 $body-color: #111;
+$theme-colors: (
+  "primary": #653737,
+  "danger": #ff4136
+);
+
+$primary-color: #653737;
+$primary-light: rgba(69, 38, 38, 0.8);
+$tint-color: rgba(0, 0, 0, 0.38);
+$secondary-color: #ee8162;
+$font-dark: #241414;
+$grey-color:rgba(0, 0, 0, 0.6);
+
+
+
+$transition: 0.2s ease-in-out;
+
+// Size
+$regular-size: 12px;
+$medium-size: 14px;
+
+// Button
+$primary-button: $primary-color;
+
+
+$white: #ffffff;
+$black: #000000;
