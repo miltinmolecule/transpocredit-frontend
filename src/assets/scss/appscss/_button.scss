@@ -1,0 +1,26 @@
+.btn-primary {
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary-color;
+  border: $primary-color;
+  outline: none;
+  box-shadow: none;
+  >* {
+    display: flex;
+  }
+  &.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $primary-color;
+    border: $primary-color;
+    transition: $transition-medium;
+    &:hover {
+      background-color: $primary-color;
+      border: solid 1px $primary-color;
+      opacity: 0.7;
+    }
+  }
+}

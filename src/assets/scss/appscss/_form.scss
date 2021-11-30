@@ -1,0 +1,18 @@
+.form-group {
+  position: relative;
+  margin-bottom: 25px;
+  label {
+    position: absolute;
+    top: -13px;
+    left: 15px;
+    background-color: $white;
+    padding: 5px;
+    font-size: 13px;
+  }
+  input {
+    margin-bottom: 5px;
+  }
+  .btn {
+    min-width: 180px;
+  }
+}

@@ -1,0 +1,54 @@
+header {
+  min-height: 100vh;
+}
+
+.banner-view {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url('../img/transpocredit-background.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-caption {
+  h1 {
+    font-weight: bold;
+    font-size: 72px;
+    margin: 10px 0;
+  }
+  p {
+    color: $section-paragrph;
+    font-weight: 400;
+    margin-bottom: 2em;
+  }
+  .btn-primary {
+    min-width: 190px;
+  }
+}
+
+.banner-images {
+  img {
+    width: 100%;
+  }
+}
+
+.btn-cap {
+  display: flex;
+  align-items: center;
+  a {
+    margin-left: 2em;
+    color: $primary-color;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    transition: $transition-medium;
+    &:hover {
+      opacity: 0.7;
+    }
+    span {
+      color: $primary-tint;
+      margin-left: 5px;
+    }
+  }
+}

@@ -1,10 +1,17 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router';
-import { BootstrapVue } from 'bootstrap-vue'
+import { BootstrapVue } from 'bootstrap-vue';
+import * as VueGoogleMaps from 'vue2-google-maps'
+import './customjs/scr'
 
 Vue.use(BootstrapVue);
-
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyBzlLYISGjL_ovJwAehh6ydhB56fCCpPQw',
+    libraries: 'places',
+  },
+})
 
 import "animate.css"
 import "./assets/scss/app.scss";

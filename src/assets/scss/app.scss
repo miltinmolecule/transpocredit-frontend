@@ -1,5 +1,22 @@
 // Define variable defaults
-@import "./variable";
+@import "variable";
+@import "./appscss/mixins";
+@import "./appscss/button";
 // Then import Bootstrap an BootstrapVue SCSS files (order is important)
 @import 'node_modules/bootstrap/scss/bootstrap.scss';
-@import 'node_modules/bootstrap-vue/src/index.scss';
+@import "node_modules/bootstrap-vue/src/index.scss";
+// @import 'node_modules/bootstrap-vue/src/index.scss';
+@import "./appscss/nav";
+@import "./appscss/header";
+@import "./appscss/form";
+@import "./appscss/carousel";
+@import "./appscss/body";
+@import "./appscss/footer";
+a,
+* {
+  outline: none;
+}
+
+a:active {
+  opacity: 1;
+}
