@@ -2,10 +2,12 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router';
 import { BootstrapVue } from 'bootstrap-vue';
-import * as VueGoogleMaps from 'vue2-google-maps'
+import * as VueGoogleMaps from 'vue2-google-maps';
+import carousel from 'vue-owl-carousel';
 import './customjs/scr'
 
 Vue.use(BootstrapVue);
+Vue.use(carousel);
 Vue.use(VueGoogleMaps, {
   load: {
     key: 'AIzaSyBzlLYISGjL_ovJwAehh6ydhB56fCCpPQw',

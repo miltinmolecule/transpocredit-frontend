@@ -14,6 +14,8 @@ var _bootstrapVue = require("bootstrap-vue");
 
 var VueGoogleMaps = _interopRequireWildcard(require("vue2-google-maps"));
 
+var _vueOwlCarousel = _interopRequireDefault(require("vue-owl-carousel"));
+
 require("./customjs/scr");
 
 require("animate.css");
@@ -21,6 +23,8 @@ require("animate.css");
 require("./assets/scss/app.scss");
 
 _vue.default.use(_bootstrapVue.BootstrapVue);
+
+_vue.default.use(_vueOwlCarousel.default);
 
 _vue.default.use(VueGoogleMaps, {
   load: {
