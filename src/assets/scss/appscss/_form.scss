@@ -3,7 +3,7 @@
   margin-bottom: 25px;
   label {
     position: absolute;
-    top: -13px;
+    top: -15px;
     left: 15px;
     background-color: $white;
     padding: 5px;
@@ -11,6 +11,15 @@
   }
   input {
     margin-bottom: 5px;
+    height: 45px;
+  }
+  .form-control {
+    transition: $transition-medium;
+    box-shadow: none !important;
+    border: $border;
+    &:focus {
+      padding-left: 25px;
+    }
   }
   .btn {
     min-width: 180px;
