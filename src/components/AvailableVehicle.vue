@@ -1,23 +1,23 @@
 <template>
   <div class="available-vehicle">
     <h6 class="mb-4">Available Vehicle</h6>
-   <div>
+    <div>
       <AvailableCard />
-    <AvailableCard />
-    <AvailableCard />
-   </div>
-  <AvailableModal />
+      <AvailableCard />
+      <AvailableCard />
+    </div>
+    <AvailableModal />
   </div>
 </template>
 
 <script>
-import AvailableCard from './AvailableCard.vue'
-import AvailableModal from './AvailableModal.vue'
+import AvailableCard from "./AvailableCard.vue";
+import AvailableModal from "./AvailableModal.vue";
 export default {
-  components:{
+  components: {
     AvailableCard,
-    AvailableModal
-  }
+    AvailableModal,
+  },
 };
 </script>
 
