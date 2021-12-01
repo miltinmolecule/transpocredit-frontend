@@ -317,7 +317,7 @@
                 <GmapMap ref="mapRef"></GmapMap>
               </div>
               <p>
-                <span><font-awesome-icon :icon="faMapPin" /></span>
+                <span class="pin"><font-awesome-icon :icon="faMapMarker" /></span>
                 Where to find us
               </p>
               <div class="row">
@@ -345,7 +345,7 @@
 <script>
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import {
-  faMapPin,
+  faMapMarker,
   faAngleLeft,
   faAngleRight,
 } from "@fortawesome/free-solid-svg-icons";
@@ -363,7 +363,7 @@ export default {
   },
   data() {
     return {
-      faMapPin,
+      faMapMarker,
       faAngleLeft,
       faAngleRight,
     };

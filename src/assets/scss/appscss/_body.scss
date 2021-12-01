@@ -315,6 +315,27 @@ section {
   }
 }
 
+// Map Section
+.map-view {
+  a,
+  address,
+  p {
+    font-weight: 500;
+    color: $text-color;
+  }
+  .pin {
+    margin-right: 10px;
+    color: $primary-color;
+  }
+  a {
+    transition: $transition-medium;
+    &:hover {
+      opacity: 0.7;
+      text-decoration: none;
+    }
+  }
+}
+
 @keyframes opacify {
   0% {
     background-color: rgba($outlay, 0.1);
