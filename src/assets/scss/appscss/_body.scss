@@ -76,6 +76,38 @@ section {
   }
 }
 
+// how it works
+.custom-title {
+  font-weight: bolder;
+  font-size: $font-medium * 2.5;
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.card {
+  &.transpo-card {
+    background-color: $white;
+    box-shadow: $card-shadow;
+    min-height: 390px;
+    margin: 1em 0;
+    border-radius: 10px;
+    padding: 1.5em 2em;
+    .-icon {
+      width: 40px;
+      height: 40px;
+      margin: 10px 0 2em;
+    }
+    h6 {
+      font-weight: bold;
+      margin-bottom: 1em;
+    }
+    p {
+      font-size: $font-medium;
+      margin-bottom: 1em;
+    }
+  }
+}
+
 .img-wrap {
   position: relative;
   display: flex;

@@ -12,3 +12,19 @@
   height: 100%;
   display: block;
 }
+
+.driver-icon {
+  background-image: url("../img/driver-icon.svg");
+}
+
+.investor-icon {
+  background-image: url("../img/investor-icon.svg");
+}
+
+.payment-icon {
+  background-image: url("../img/payment-icon.svg");
+}
+
+.statistics-icon {
+  background-image: url("../img/statistics-icon.svg");
+}

@@ -37,6 +37,88 @@
 
     <section>
       <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="carousel-wrapper"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="custom-title">How Does It Works</h2>
+          </div>
+          <div class="col-md-6">
+            <div class="card transpo-card">
+              <span class="-icon"><i class="investor-icon"></i></span>
+              <h6>Small investors</h6>
+              <p>
+                Small investors have the opportunity to partake in the business
+                with a minimum of one vehicle. The vehicle must conform in terms
+                of documentations, comprehensive insurance and everything that
+                makes a vehicle roadworthy. We will link the vehicle registered
+                to a driver that will be using the vehicle for transportation
+                and repaying on weekly basis to us while we remit monthly to our
+                small investors. (Note, there will be a regulated amount for the
+                small investors to achieve the purpose of the project)
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card transpo-card">
+              <span class="-icon"><i class="driver-icon"></i></span>
+              <h6>Intending drivers</h6>
+              <p>
+                Intending drivers have the opportunity to choose a vehicle of
+                their choice (model, year, colour etc) and go through the
+                registration process to align with terms and conditions. After
+                successful registration, we will look at the drivers choice of
+                the vehicle first from the local small investors. If we could
+                get the choice of vehicle locally, we will get it delivered to
+                the driver ASAP but otherwise, we will ship in the choice of the
+                vehicle which may take 1-2 months for purchase, shipment,
+                clearing, registrations and handling over to the intending
+                driver.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card transpo-card">
+              <span class="-icon"><i class="statistics-icon"></i></span>
+              <h6>Monitoring and controlling</h6>
+              <p>
+                All activities will be done online except in cases of
+                confirmation of address, handing over of the vehicle and every
+                other thing that will require us to meet with the intending
+                driver or small investors. We have an app where all applications
+                will be done, approved, monitored, and controlled throughout the
+                period of partnering with TrasnposCredit.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card transpo-card">
+              <span class="-icon"><i class="payment-icon"></i></span>
+              <h6>Successful Payment</h6>
+              <p>
+                Ownership of the vehicle remains TranspoCredit or small
+                investors until all the agreed payments have been made before we
+                transfer ownership to the intending driver. Failure to complete
+                payment, TranspoCredit has the right to withdraw the vehicle and
+                reissue it to a serious intending driver at a reduced cost
+                depending on how long it has been used.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
         <div class="action-view">
           <h2>Act Quickly</h2>
           <p>
@@ -102,7 +184,8 @@
               </div>
               <p>
                 <span><font-awesome-icon :icon="faMapPin" /></span>
-                Where to find us</p>
+                Where to find us
+              </p>
               <div class="row">
                 <div class="col-md-6">
                   <address>
@@ -128,22 +211,22 @@
 <script>
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faMapPin } from "@fortawesome/free-solid-svg-icons";
-import { GmapMap } from 'vue2-google-maps'
+import { GmapMap } from "vue2-google-maps";
 export default {
   components: {
     GmapMap,
-    FontAwesomeIcon
+    FontAwesomeIcon,
   },
   data() {
     return {
-      faMapPin
-    }
+      faMapPin,
+    };
   },
-  mounted () {
+  mounted() {
     this.$refs.mapRef.$mapPromise.then((map) => {
-      map.panTo({lat: 1.38, lng: 103.80})
-    })
-  }
+      map.panTo({ lat: 1.38, lng: 103.8 });
+    });
+  },
 };
 </script>
 
