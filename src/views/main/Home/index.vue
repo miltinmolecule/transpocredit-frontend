@@ -39,7 +39,52 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <div class="carousel-wrapper"></div>
+            <h2 class="custom-title">Hot deals</h2>
+          </div>
+          <div class="col-md-12">
+            <div class="carousel-wrapper">
+              <carousel
+                class="hotdeals-carousel"
+                :dots="false"
+                :items="1"
+                :nav="false"
+              >
+                <template slot="prev">
+                  <span class="custom-prev">
+                    <font-awesome-icon :icon="faAngleLeft" />
+                  </span>
+                </template>
+                <div class="auto-card-view">
+                  <img src="@/assets/img/car-image.png" />
+                  <div class="auto-card-caption">
+                    <h6>Vehicle Name</h6>
+                    <p>Total Package</p>
+                    <h4><span>#</span>300,000,000</h4>
+                  </div>
+                </div>
+                <div class="auto-card-view">
+                  <img src="@/assets/img/car-image.png" />
+                  <div class="auto-card-caption">
+                    <h6>Vehicle Name</h6>
+                    <p>Total Package</p>
+                    <h4><span>#</span>300,000,000</h4>
+                  </div>
+                </div>
+                <div class="auto-card-view">
+                  <img src="@/assets/img/car-image.png" />
+                  <div class="auto-card-caption">
+                    <h6>Vehicle Name</h6>
+                    <p>Total Package</p>
+                    <h4><span>#</span>300,000,000</h4>
+                  </div>
+                </div>
+                <template slot="next">
+                  <span class="custom-next">
+                    <font-awesome-icon :icon="faAngleRight" />
+                  </span>
+                </template>
+              </carousel>
+            </div>
           </div>
         </div>
       </div>
@@ -117,6 +162,95 @@
       </div>
     </section>
 
+    <section class="features">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="custom-header">
+              <h2>Features</h2>
+              <p>
+                TrasnpoCredit basically will be an online service provider that
+                will benefit both the intending drivers and people (small
+                investors)
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-option right">
+              <div class="dot-it"></div>
+              <h6>Small Investors</h6>
+              <p>
+                Take Ehya wherever you go so that you know what’s going on with
+                your money at all times.
+              </p>
+            </div>
+            <div class="feature-option right">
+              <div class="dot-it"></div>
+              <h6>Track your spending</h6>
+              <p>
+                Follow your plan by keeping track of your spending throughout
+                the month.
+              </p>
+            </div>
+
+            <div class="feature-option right">
+              <div class="dot-it"></div>
+              <h6>Activity statistics</h6>
+              <p>
+                See statistics of income and expenses and displaying the
+                forecast in the next period.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <div class="feature-option">
+              <div class="dot-it"></div>
+              <h6>Secure transfer</h6>
+              <p>
+                Take Ehya wherever you go so that you know what’s going on with
+                your money at all times.
+              </p>
+            </div>
+            <div class="feature-option">
+              <div class="dot-it"></div>
+              <h6>Budget that works</h6>
+              <p>
+                Create budgets you can actually stick to, and see how you’re
+                spending your money.
+              </p>
+            </div>
+            <div class="feature-option">
+              <div class="dot-it"></div>
+              <h6>Total control</h6>
+              <p>
+                Take a full control of your expenses. Landy will help you to do
+                that anywhere anytime.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="custom-header">
+              <h2>Testimonials</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae
+                nunc vitae mauris orci morbi. Sed facilisis.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <Testimonial />
+          </div>
+        </div>
+      </div>
+    </section>
     <section>
       <div class="container">
         <div class="action-view">
@@ -210,16 +344,28 @@
 
 <script>
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { faMapPin } from "@fortawesome/free-solid-svg-icons";
+import {
+  faMapPin,
+  faAngleLeft,
+  faAngleRight,
+} from "@fortawesome/free-solid-svg-icons";
+import carousel from "vue-owl-carousel";
+
 import { GmapMap } from "vue2-google-maps";
+import Testimonial from '../../../components/Testimonial.vue';
+
 export default {
   components: {
     GmapMap,
+    carousel,
     FontAwesomeIcon,
+    Testimonial,
   },
   data() {
     return {
       faMapPin,
+      faAngleLeft,
+      faAngleRight,
     };
   },
   mounted() {
