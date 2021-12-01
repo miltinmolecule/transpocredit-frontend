@@ -1,6 +1,6 @@
 <template>
   <div class="body">
-    <HeaderView />
+    <HeaderView  />
     <main>
       <router-view></router-view>
     </main>
@@ -74,4 +74,3 @@ export default {
       flex: 1;
     }
   }
-</style>

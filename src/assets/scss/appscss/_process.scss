@@ -1,0 +1,115 @@
+
+.get-vehicle {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  h2 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    color: $process-dark;
+    font-size: 52px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  p {
+    color: $section-paragrph;
+    font-weight: 500;
+  }
+  .stepppers-container {
+    display: flex;
+    align-items: center;
+    p {
+      margin-bottom: 0px;
+    }
+    .circle-wrapper {
+      width: 50px;
+      .custom-circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        background-color: #fbf5f5;
+        border-radius: 25px;
+        span {
+          color : $green-color
+        }
+      }
+    }
+  }
+}
+
+.vehicle--process{
+width: 80%;
+}
+.form-wrapper {
+  background-color: #ffffff;
+  box-shadow: 0px 4px 12px 5px rgba(0, 0, 0, 0.14);
+  border-radius: 10px;
+  padding: 2.5rem;
+  .form-title {
+    display: flex;
+    align-items: center;
+    span {
+      margin-right: 10px;
+    }
+    h5 {
+      margin-bottom: 0px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+  .btn-footer {
+    margin-top: 6rem;
+    border-radius: 0px;
+  }
+  .profile-form-title {
+    display: flex;
+    justify-content: space-between;
+    .head-wrap {
+      display: flex;
+      align-items: flex-end;
+      span {
+        margin-right: 10px;
+      }
+      h5 {
+        margin-bottom: 0px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      p {
+        margin-bottom: 0px;
+        font-size: 10px;
+        color: #9d9d9d;
+      }
+    }
+    .img-field {
+      height: 65px;
+      width: 65px;
+      background-color: #f3f3f3;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      position: relative;
+      justify-content: center;
+      cursor: pointer;
+      .file-input {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        cursor: pointer;
+      }
+    }
+    .profile-form-footer {
+      margin-top: 4rem;
+    }
+  }
+  .guarantor {
+    p {
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+}

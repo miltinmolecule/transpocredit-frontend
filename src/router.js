@@ -5,6 +5,7 @@ Vue.use(VueRouter);
 console.log('');
 
 const MainLayoutView = () => import('./layouts/MainLayout.vue');
+const ProcessLayoutView = () => import('./layouts/VehicleProcess.vue');
 
 const routes = [
   {
@@ -18,7 +19,13 @@ const routes = [
       {
         path: '/home',
         component: () => import('./views/main/Home'),
-      },
+      }
+    ]
+  },
+  {
+    path: '',
+    component: ProcessLayoutView,
+    children: [
       {
         path: '/get-vehicle',
         component: () => import('./views/main/GetVehicle'),
