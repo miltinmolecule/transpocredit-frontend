@@ -5,9 +5,9 @@
       <h5>Vehicle Details</h5>
     </div>
     <form class="">
-      <CustomInput placeholder="Select vehicle brand" label="Vehicle Brand" />
-      <CustomInput label="Vehicle Model" placeholder="Select vehicle model" />
-      <CustomInput label="Vehicle Year" placeholder="Select vehicle year" />
+      <CustomSelect placeholder="Select vehicle brand" label="Vehicle Brand" />
+      <CustomSelect label="Vehicle Model" placeholder="Select vehicle model" />
+      <CustomSelect label="Vehicle Year" placeholder="Select vehicle year" />
       <div class="btn-footer">
         <button class="btn btn-block btn-primary">Continue</button>
       </div>
@@ -16,10 +16,10 @@
 </template>
 
 <script>
-import CustomInput from "./CustomInput.vue";
+import CustomSelect from "./CustomSelect.vue";
 export default {
   components: {
-    CustomInput,
+    CustomSelect,
   },
 };
 </script>

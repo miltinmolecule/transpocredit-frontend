@@ -51,7 +51,7 @@
     .-icon {
       margin: 0px 10px 0px 0px;
       width: 60px;
-      height: 30px;
+      height: 35px;
     }
     h5 {
       margin-bottom: 0px;
@@ -68,12 +68,14 @@
     .head-wrap {
       display: flex;
       align-items: flex-end;
-      span {
-        margin-right: 10px;
+      .-icon {
+        margin: 0px 10px 0px 0px;
+        width: 60px;
+        height: 45px;
       }
       h5 {
         margin-bottom: 0px;
-        font-size: 18px;
+        // font-size: 18px;
         font-weight: bold;
       }
       p {

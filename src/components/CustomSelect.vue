@@ -2,8 +2,8 @@
   <div class="form-group">
     <label v-if="label" :for="`${label}-field`">{{ label }}</label>
     <select :id="`${label}-field`" class="form-control">
-      <option selected>Choose...</option>
-      <option>...</option>
+      <option>Option 1...</option>
+      <option>Option 2..</option>
     </select>
   </div>
 </template>
