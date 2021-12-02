@@ -9,7 +9,7 @@
           <div class="vehicle--process">
             <template v-if="step === 1">
               <div>
-                <div v-if="false">
+                <div v-if="true">
                   <VehicleDetailsForm />
                 </div>
                 <div v-else>
