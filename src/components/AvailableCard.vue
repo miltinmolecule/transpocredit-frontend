@@ -1,7 +1,7 @@
 <template>
   <div @click="$bvModal.show('modal-scoped')" class="available-card">
     <div class="img-wrapper">
-      <img src="@/assets/images/svgs/available-car.svg" alt="" />
+      <img src="@/assets/img/available-car.svg" alt="" />
     </div>
     <div class="card-content px-3">
       <div>

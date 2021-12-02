@@ -1,12 +1,10 @@
 <template>
   <div class="form-group">
     <label v-if="label" :for="`${label}-field`">{{ label }}</label>
-    <input
-      :id="`${label}-field`"
-      :placeholder="placeholder"
-      :type="type"
-      class="form-control"
-    />
+    <select :id="`${label}-field`" class="form-control">
+      <option selected>Choose...</option>
+      <option>...</option>
+    </select>
   </div>
 </template>
 
