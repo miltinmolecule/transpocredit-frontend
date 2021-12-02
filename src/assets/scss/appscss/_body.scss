@@ -347,3 +347,52 @@ section {
     background-color: rgba($outlay, 0.1);
   }
 }
+
+@media (max-width: 860px) {
+  .action-view {
+    padding: 2em 0em;
+  }
+  .features {
+    min-height: 1300px;
+    padding: 3em 0;
+    background-color: $primary-color;
+    background-image: url();
+  }
+  .custom-header {
+    width: 100%;
+  }
+  .feature-option.right {
+    text-align: left;
+    align-items: flex-start;
+  }
+  .about-content {
+    padding: 3em 2em;
+    h2 {
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 1em;
+    }
+  }
+  .banner-images {
+    height: 220px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  .hotdeals-carousel .custom-next,
+  .hotdeals-carousel .custom-prev {
+    display: none;
+  }
+  .auto-card-view {
+    height: 290px;
+    margin: 20px 10px !important;
+    padding: 1em;
+    box-shadow: 3px 4px 9px rgb(0, 0, 0, 0.06), 1px 5px 10px rgb(0, 0, 0, 0.2), 4px 4px 12px rgb(0, 0, 0, 0.10);
+    .auto-card-caption {
+      padding: 1em 1em 0.5em;
+      cursor: pointer;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}

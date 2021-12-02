@@ -83,7 +83,7 @@ export default {};
     li {
       position: relative;
       &.selected {
-         &::before {
+        &::before {
           content: "";
           height: 40px;
           width: 40px;
@@ -100,7 +100,6 @@ export default {};
           height: 150px;
           margin: 5px 0;
         }
-
       }
     }
   }
@@ -118,6 +117,20 @@ export default {};
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+}
+
+@media (max-width: 860px) {
+  .wrap-testimonial {
+    display: block;
+    .content-detail {
+      width: 100%;
+    }
+  }
+  .line-users {
+    ul {
+      display: none;
+    }
   }
 }
 </style>
