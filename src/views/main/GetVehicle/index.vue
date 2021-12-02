@@ -20,6 +20,9 @@
             <template v-if="step === 2">
               <ProfileDetailsForm />
             </template>
+            <template v-if="step === 3">
+              <GuarantorsForm />
+            </template>
           </div>
         </div>
       </div>
@@ -32,6 +35,7 @@ import VehicleDetailsForm from "@/components/VehicleDetailsForm.vue";
 import SidePanel from "@/components/SidePanel";
 import ProfileDetailsForm from "@/components/ProfileDetailsForm.vue";
 import AvailableVehicle from "@/components/AvailableVehicle.vue";
+import GuarantorsForm from "@/components/GuarantorsForm.vue";
 
 export default {
   data() {
@@ -44,6 +48,7 @@ export default {
     SidePanel,
     AvailableVehicle,
     ProfileDetailsForm,
+    GuarantorsForm
   },
 };
 </script>
