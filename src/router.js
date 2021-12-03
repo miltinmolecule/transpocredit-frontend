@@ -4,42 +4,34 @@ Vue.use(VueRouter);
 
 console.log('');
 
-const MainLayoutView = () => import('./layouts/MainLayout.vue');
-const ProcessLayoutView = () => import('./layouts/VehicleProcess.vue');
+const MainLayoutView = () =>
+  import ('./layouts/MainLayout.vue');
+const ProcessLayoutView = () =>
+  import ('./layouts/VehicleProcess.vue');
 
-const routes = [
-  {
+const routes = [{
     path: '',
     component: MainLayoutView,
-    children: [
-      {
+    children: [{
         path: '/',
         redirect: '/home'
       },
       {
         path: '/home',
-        component: () => import('./views/main/Home'),
+        component: () =>
+          import ('./views/main/Home'),
       }
     ]
   },
   {
     path: '',
     component: ProcessLayoutView,
-    children: [
-      {
-        path: '/get-vehicle',
-        component: () => import('./views/main/GetVehicle'),
-      },
-      {
-        path: '/success-page',
-        component: () => import('./views/main/SuccessPage'),
-      },
-      {
-        path: '/payment-plan',
-        component: () => import('./views/main/PaymentPlan'),
-      }
-    ]
-  },
+    children: [{
+      path: '/get-vehicle',
+      component: () =>
+        import ('./views/main/GetVehicle'),
+    }]
+  }
 ];
 
 const router = new VueRouter({

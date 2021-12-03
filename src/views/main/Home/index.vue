@@ -314,10 +314,12 @@
           <div class="col-md-6">
             <div class="map-view">
               <div class="map-container">
-                <GmapMap ref="mapRef"></GmapMap>
+                <!-- <GmapMap ref="mapRef"></GmapMap> -->
               </div>
               <p>
-                <span class="pin"><font-awesome-icon :icon="faMapMarker" /></span>
+                <span class="pin"
+                  ><font-awesome-icon :icon="faMapMarker"
+                /></span>
                 Where to find us
               </p>
               <div class="row">
@@ -344,6 +346,7 @@
 
 <script>
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+// import { mapState } from "vuex";
 import {
   faMapMarker,
   faAngleLeft,
@@ -351,12 +354,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import carousel from "vue-owl-carousel";
 
-import { GmapMap } from "vue2-google-maps";
-import Testimonial from '../../../components/Testimonial.vue';
+// import { GmapMap } from "vue2-google-maps";
+import Testimonial from "../../../components/Testimonial.vue";
 
 export default {
   components: {
-    GmapMap,
+    // GmapMap,
     carousel,
     FontAwesomeIcon,
     Testimonial,
@@ -369,9 +372,9 @@ export default {
     };
   },
   mounted() {
-    this.$refs.mapRef.$mapPromise.then((map) => {
-      map.panTo({ lat: 1.38, lng: 103.8 });
-    });
+    // this.$refs.mapRef.$mapPromise.then((map) => {
+    //   map.panTo({ lat: 1.38, lng: 103.8 });
+    // });
   },
 };
 </script>

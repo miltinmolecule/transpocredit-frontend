@@ -18,6 +18,8 @@ var _vueOwlCarousel = _interopRequireDefault(require("vue-owl-carousel"));
 
 require("./customjs/scr");
 
+var _store = _interopRequireDefault(require("./config/store"));
+
 require("animate.css");
 
 require("./assets/scss/app.scss");
@@ -36,6 +38,7 @@ _vue.default.use(VueGoogleMaps, {
 _vue.default.config.productionTip = false;
 new _vue.default({
   router: _router.default,
+  store: _store.default,
   render: function render(h) {
     return h(_App.default);
   }

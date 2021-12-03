@@ -5,6 +5,7 @@ import { BootstrapVue } from 'bootstrap-vue';
 import * as VueGoogleMaps from 'vue2-google-maps';
 import carousel from 'vue-owl-carousel';
 import './customjs/scr'
+import store from './config/store'
 
 Vue.use(BootstrapVue);
 Vue.use(carousel);
@@ -22,5 +23,6 @@ Vue.config.productionTip = false
 
 new Vue({
   router,
+  store,
   render: h => h(App),
 }).$mount('#app')

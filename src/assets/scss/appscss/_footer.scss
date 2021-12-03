@@ -18,6 +18,7 @@ footer {
         color: $white;
         font-size: 14px;
         margin: 10px 0;
+        font-weight: 300;
         transition: $transition-medium;
         &:hover {
           color: $white;
@@ -30,6 +31,7 @@ footer {
   address {
     color: $white;
     font-size: 14px;
+    font-weight: 300;
   }
 }
 

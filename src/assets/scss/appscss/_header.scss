@@ -20,7 +20,7 @@ header {
   }
   p {
     color: $section-paragrph;
-    font-weight: 400;
+    font-weight: 300;
     margin-bottom: 2em;
   }
   .btn-primary {
@@ -39,6 +39,7 @@ header {
   align-items: center;
   a {
     margin-left: 2em;
+    font-weight: 300;
     color: $primary-color;
     text-transform: uppercase;
     text-decoration: none !important;

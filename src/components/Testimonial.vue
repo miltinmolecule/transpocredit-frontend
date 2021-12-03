@@ -60,6 +60,7 @@ export default {};
   }
   p {
     margin-bottom: 2.5em;
+    font-weight: 300;
   }
 }
 .info-detail {
