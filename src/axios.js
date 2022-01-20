@@ -1,10 +1,10 @@
 import axios from "axios"
 
 const APP_DOMAIN = "";
-let baseURL = "";
+let baseURL = "https://www.transpocredit.com/api";
 
 if (process.env.NODE_ENV === 'production') {
-  baseURL = ""
+  baseURL = "https://www.transpocredit.com/api"
 }
 export default axios.create({
   APP_DOMAIN,

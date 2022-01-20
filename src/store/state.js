@@ -1,4 +1,4 @@
-const userLoc = JSON.parse(localStorage.getItem("trcppy")) || {}
+const userLoc = JSON.parse(localStorage.getItem("trcppyInfo")) || {}
 
 const getData = () => {
   return userLoc;

@@ -28,3 +28,27 @@ a:active {
 .modal-backdrop {
   background-color: rgba($black, 0.56);
 }
+
+p.error {
+  font-size: $font-regular - 1 !important;
+  font-weight: 400 !important;
+  color: $red !important;
+  margin: 5px 0 0 !important;
+}
+.error {
+  color: $red !important;
+}
+
+.close_icon {
+  position: absolute;
+  right: -30px;
+  top: -10px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $red;
+  cursor: pointer;
+  font-size: 20px;
+}

@@ -8,32 +8,36 @@
 */
 <template>
   <div class="form-group">
-    <label :for="`${label}-field`" :class="{error}">{{ label }}</label>
-    <v-select
+    <label :for="`${name}-field`" :class="{ error }">{{ label }}</label>
+    <datepicker
       :id="name"
       :name="name"
       :placeholder="placeholder"
       :options="options"
       :value="value"
+      format="dd MMM yyyy"
       @input="$emit('input', $event)"
-      @search:blur="$emit('validateField')"
-      @option:selected="$emit('selectedField', $event)"
-    ></v-select>
+      @selected="$emit('validateField', $event)"
+      @closed="$emit('validateField', $event)"
+      input-class="form-control"
+    ></datepicker>
+    <!--  @closed="$emit('selectedField', $event)" -->
     <!--  @keypress="$emit('validateField')" -->
     <!-- <p v-if="error" class="error">{{ error }}</p> -->
   </div>
 </template>
 
 <script>
-import vSelect from "vue-select";
+import Datepicker from 'vuejs-datepicker';
+
 export default {
-  components: { vSelect },
+  components: { Datepicker },
   props: {
     name: { type: String },
     options: { type: Array },
     label: { type: String },
-    value: { type: String },
-    placeholder: { type: String, default: 'Select-' },
+    value: { type: Date },
+    placeholder: { type: String, default: 'Select Date' },
     error: { required: true },
   },
 };

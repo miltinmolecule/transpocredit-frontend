@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="app-header">
     <b-navbar toggleable="lg" type="dark" fixed="top">
       <div class="container">
         <b-navbar-brand to="/" class="brand-logo">

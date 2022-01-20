@@ -4,24 +4,160 @@
   label {
     position: absolute;
     top: -15px;
-    left: 15px;
+    left: 10px;
     background-color: $white;
-    padding: 5px;
+    padding: 5px 5px 0;
     font-size: 13px;
+    z-index: 1;
+    border-radius: 2px;
+    transition: $transition-medium;
   }
   input {
     margin-bottom: 5px;
-    height: 45px;
+    height: 40px;
+    &::-webkit-file-upload-button,
+    &::file-selector-button {
+      display: none;
+    }
+    &[type='file'] {
+      line-height: 30px;
+    }
   }
   .form-control {
     transition: $transition-medium;
     box-shadow: none !important;
     border: $border;
+    border-radius: 10px;
+    padding-right: 20px;
+    font-size: $font-regular;
+    height: 45px;
     &:focus {
       padding-left: 25px;
+    }
+    &:disabled,
+    &[readonly] {
+      background-color: $white;
     }
   }
   .btn {
     min-width: 180px;
   }
+  .v-select {
+    input {
+      height: 35px;
+      padding: 0 15px;
+      font-size: $font-regular;
+      &::placeholder {
+        opacity: 0.5;
+      }
+    }
+  }
+  .vs__selected {
+    padding: 0 15px;
+    font-size: $font-regular;
+  }
+  .vs__dropdown-toggle {
+    padding: 0;
+    border-radius: 10px;
+  }
+  .vs__dropdown-menu {
+    visibility: visible !important;
+    display: block !important;
+    li {
+      &:hover {
+        background-color: $primary-color;
+      }
+      &.selected {
+        background-color: $primary-color;
+      }
+    }
+  }
+  .vs__dropdown-option {
+    transition: $transition-medium;
+    font-size: $font-regular;
+    padding: 10px;
+  }
+  .vs__dropdown-option--highlight {
+    background-color: $primary-tint;
+    color: $white;
+  }
+  // .vs__open-indicator {
+  //   fill: $paragraph;
+  //   width: 15px;
+  //   object-fit: contain;
+  // }
 }
+
+.vdp-datepicker__calendar {
+  position: absolute;
+  z-index: 100;
+  background: #fff;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  font-size: 13px;
+  overflow: hidden;
+  >* {
+    transition: $transition-medium;
+  }
+  .cell {
+    transition: $transition-medium;
+    border-radius: 2px;
+    &.year,
+    &.month,
+    &.day {
+      &:hover {
+        border: 1px solid $primary-color !important;
+      }
+    }
+    &.selected {
+      background: $primary-color !important;
+      color: $white;
+      &:hover {
+        background-color: $primary-tint !important;
+        border: none !important;
+        color: $white;
+      }
+    }
+    &.day-header {
+      font-size: 14px;
+      white-space: nowrap;
+      cursor: inherit;
+      font-weight: 500;
+      background: #f3f3f3;
+    }
+  }
+  header {
+    .next,
+    .prev {
+      background-color: $white;
+      color: $primary-color;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
+.modal-form {
+  width: 100%;
+  padding: 1em 2em;
+  text-align: center;
+  h3 {
+    font-weight: bolder;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 28px;
+    color: rgba($black, 0.6);
+    margin-bottom: 0.7em;
+  }
+  p {
+    opacity: 0.5;
+    color: $black;
+    margin-bottom: 1.5em;
+  }
+  .btn {
+    margin-bottom: 1em;
+  }
+}
+
+

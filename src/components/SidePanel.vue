@@ -1,51 +1,27 @@
 <template>
-  <div class="">
-    <h2>Get Your dream Car in few Steps.</h2>
-    <p class="mt-4">
-      TranspoCredit is a platform designed for intending drivers to get a
-      vehicle of their choice at an affordable cost and repay back on instalment
-      within a specific time.
-    </p>
-    <div>
-      <div class="stepppers-container mb-3">
-        <div class="circle-wrapper">
-          <div class="custom-circle">
-            <span v-if="stepNumber === 1"
-              ><font-awesome-icon :icon="faCheck"
-            /></span>
+  <div class="col-md-5">
+    <div class="sidepanel-view">
+      <h2>Get Your dream Car in few Steps.</h2>
+      <p class="mt-4">
+        TranspoCredit is a platform designed for intending drivers to get a
+        vehicle of their choice at an affordable cost and repay back on
+        instalment within a specific time.
+      </p>
+      <div>
+        <div
+          class="stepppers-container mb-3"
+          v-for="(stepItem, s) in steplist"
+          :key="s"
+        >
+          <div class="circle-wrapper">
+            <div class="custom-circle">
+              <span v-if="stepItem.count <= stepNumber">
+                <font-awesome-icon :icon="faCheck" />
+              </span>
+            </div>
           </div>
+          <p>{{ stepItem.title }}</p>
         </div>
-        <p>Vehicle Details</p>
-      </div>
-      <div class="stepppers-container mb-3">
-        <div class="circle-wrapper">
-          <div class="custom-circle">
-            <span v-if="stepNumber === 2"
-              ><font-awesome-icon :icon="faCheck"
-            /></span>
-          </div>
-        </div>
-        <p>Profile Information</p>
-      </div>
-      <div class="stepppers-container mb-3">
-        <div class="circle-wrapper">
-          <div class="custom-circle">
-            <span v-if="stepNumber === 3"
-              ><font-awesome-icon :icon="faCheck"
-            /></span>
-          </div>
-        </div>
-        <p>Guarantor Information</p>
-      </div>
-      <div class="stepppers-container mb-3">
-        <div class="circle-wrapper">
-          <div class="custom-circle">
-            <span v-if="stepNumber === 4"
-              ><font-awesome-icon :icon="faCheck"
-            /></span>
-          </div>
-        </div>
-        <p>Agreement</p>
       </div>
     </div>
   </div>
@@ -58,14 +34,45 @@ export default {
   data() {
     return {
       faCheck,
+      currentStep: 1,
+      steplist: [
+        {
+          count: 1,
+          title: "Profile Information",
+        },
+        {
+          count: 2,
+          title: "Vehicle Details",
+        },
+        {
+          count: 3,
+          title: "Guarantor Information",
+        },
+        {
+          count: 4,
+          title: "Agreement",
+        },
+      ],
     };
   },
   components: {
     FontAwesomeIcon,
   },
-  props: { stepNumber: Number },
+  props: {
+    stepNumber: Number,
+  },
 };
 </script>
-
-<style>
+<style lang="scss" scoped>
+.sidepanel-view {
+  padding: 0 3em 0 0;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media (max-width: 860px) {
+    padding-top: 4em;
+    height: auto;
+  }
+}
 </style>

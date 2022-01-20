@@ -3,6 +3,10 @@
   @include imgView(contain, center)
 }
 
+nav.navbar.no-background.navbar-dark.fixed-top.navbar-expand-lg {
+  background-color: transparent !important;
+}
+
 ul.navbar-nav.link-set {
   display: flex;
   align-items: center;
