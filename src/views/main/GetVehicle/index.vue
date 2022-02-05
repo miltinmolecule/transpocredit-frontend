@@ -21,9 +21,12 @@
               </div>
             </template>
             <template v-if="step === 3">
-              <GuarantorsForm @continueProcess="continueProcess($event)" />
+              <AgreementForm @continueProcess="continueProcess($event)" />
             </template>
             <template v-if="step === 4">
+              <GuarantorsForm @continueProcess="continueProcess($event)" />
+            </template>
+            <template v-if="step === 5">
               <SuccessView />
             </template>
           </div>
@@ -74,6 +77,7 @@ import GuarantorsForm from "@/components/GuarantorsForm.vue";
 import SuccessView from "@/components/SuccessView.vue";
 import CustomInput from "@/components/CustomInput.vue";
 import * as yup from "yup";
+import AgreementForm from '@/components/AgreementForm.vue';
 
 const formSchema = yup.object().shape({
   otp: yup.string().matches(/^[0-9]+$/).test('len', val=> val.length == 6).required().nullable(),
@@ -102,6 +106,7 @@ export default {
     GuarantorsForm,
     SuccessView,
     CustomInput,
+    AgreementForm,
   },
   methods: {
     showModal() {

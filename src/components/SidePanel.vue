@@ -46,11 +46,11 @@ export default {
         },
         {
           count: 3,
-          title: "Guarantor Information",
+          title: "Agreement",
         },
         {
           count: 4,
-          title: "Agreement",
+          title: "Guarantor Information",
         },
       ],
     };

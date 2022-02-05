@@ -33,7 +33,6 @@
             </svg>
           </span>
         </div>
-       
       </div>
       <div class="form-body">
         <div class="row">
@@ -173,7 +172,7 @@
         <b-button
           type="submit"
           class="profile-form-footer"
-          block 
+          block
           variant="primary"
           >Continue</b-button
         >
@@ -216,7 +215,7 @@ export default {
     return {
       previewImage: "",
       loading: false,
-      otp: '',
+      otp: "",
       values: {
         profile_photo: "",
         surname: "",
@@ -248,30 +247,47 @@ export default {
       this.$emit("showModal");
     },
     continueProcess(option) {
-      this.loading = true;
-      formSchema
-        .validate(this.values, { abortEarly: false })
-        .then(() => {
-          /* Call Endpoint for the Otp Verification */
+      /* Create payload from values */
+      const payload = {
+        surname: this.values.surname,
+        other_names: this.values.other_names,
+        email: this.values.email,
+        phone: this.values.phone,
+        address: this.values.address,
+        license_file: this.values.license_file,
+        profile_photo: this.values.profile_photo,
+        utility_file: this.values.utility_file,
+      };
 
-          // Verify Otp
+    
+      console.log("option", option, payload);
+      console.log(this.$store);
+      console.log(this.values);
+      // this.loading = true;
+      // formSchema
+      //   .validate(this.values, { abortEarly: false })
+      //   .then(() => {
+      //     /* Call Endpoint for the Otp Verification */
 
-          // Goto next Step
-          this.$emit("continueProcess", option);
-        })
-        .catch((err) => {
-          console.log(err);
-          err.inner.forEach((e) => {
-            this.errors = { ...this.errors, [e.path]: e.message };
-          });
-        });
+      //     // Verify Otp
+      //     console.log(this.$store, option);
+
+      //     // Goto next Step
+      //     // this.$emit("continueProcess", option);
+      //   })
+      //   .catch((err) => {
+      //     console.log(err);
+      //     err.inner.forEach((e) => {
+      //       this.errors = { ...this.errors, [e.path]: e.message };
+      //     });
+      //   });
     },
 
     /*
-        * fileChange Func(x)
-          accepts file name
-            create preview image
-            add update file for upload
+      * fileChange Func(x)
+        accepts file name
+        create preview image
+        add update file for upload
     */
     fileChange(file) {
       const filePath = file.target;
