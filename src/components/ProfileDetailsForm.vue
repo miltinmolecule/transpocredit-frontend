@@ -289,6 +289,7 @@ export default {
         create preview image
         add update file for upload
     */
+   
     fileChange(file) {
       const filePath = file.target;
 
